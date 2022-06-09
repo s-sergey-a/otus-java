@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CustomerService {
 
-    NavigableMap<Customer, String> services = new TreeMap<>(Comparator.comparingLong(Customer::getScores));
+    private final NavigableMap<Customer, String> services = new TreeMap<>(Comparator.comparingLong(Customer::getScores));
 
     private static Map.Entry<Customer, String> cloneEntry(Map.Entry<Customer, String> entry) {
         return Optional
